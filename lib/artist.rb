@@ -19,13 +19,9 @@ class Artist
     @songs << song
     @@songs << song 
   end
- 
-  def songs
-    Song.all.select { |song| song.artist == self }
-  end
   
   def self.song_count
-    Song.all.length 
+    @@songs.size 
   end 
   
 end 
